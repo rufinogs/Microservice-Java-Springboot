@@ -29,7 +29,7 @@ class PriceControllerTest {
 		assertEquals(priceExpected, price);
 	}
 
-	// Test 2: peticion a las 16:00 del día 14 del producto 35455  para la brand 1 (ZARA)
+	// Test 2
 	@Test
 	void findFirstByBrandProductDateTest2(){
 		PriceAggregate priceExpected = new PriceAggregate((long)1, LocalDateTime.parse("2020-06-14 15:00:00", formatter), LocalDateTime.parse("2020-06-14 18:30:00", formatter), (long) 2, (long) 35455, 1, 25.45, "EUR");
@@ -38,7 +38,7 @@ class PriceControllerTest {
 		assertEquals(priceExpected, price);
 	}
 
-	// Test 3: peticion a las 21:00 del día 14 del producto 35455 para la brand 1 (ZARA)
+	// Test 3
 	@Test
 	void findFirstByBrandProductDateTest3(){
 		PriceAggregate priceExpected = new PriceAggregate((long)1, LocalDateTime.parse("2020-06-14 00:00:00", formatter), LocalDateTime.parse("2020-12-31 23:59:59", formatter),(long) 1,(long) 35455, 0, 35.50, "EUR");
@@ -47,7 +47,7 @@ class PriceControllerTest {
 		assertEquals(priceExpected, price);
 	}
 
-	// Test 4: peticion a las 10:00 del día 15 del producto 35455 para la brand 1 (ZARA)
+	// Test 4
 	@Test
 	void findFirstByBrandProductDateTest4(){
 		PriceAggregate priceExpected = new PriceAggregate((long)1, LocalDateTime.parse("2020-06-15 00:00:00", formatter), LocalDateTime.parse("2020-06-15 11:00:00", formatter),(long) 3,(long) 35455, 1, 30.50, "EUR");
@@ -56,7 +56,7 @@ class PriceControllerTest {
 		assertEquals(priceExpected, price);
 	}
 
-	// Test 5: peticion a las 21:00 del día 16 del producto 35455 para la brand 1 (ZARA)
+	// Test 5
 	@Test
 	void findFirstByBrandProductDateTest5(){
 		PriceAggregate priceExpected = new PriceAggregate((long)1, LocalDateTime.parse("2020-06-15 16:00:00", formatter), LocalDateTime.parse("2020-12-31 23:59:59", formatter),(long) 4,(long) 35455, 1, 38.95, "EUR");
